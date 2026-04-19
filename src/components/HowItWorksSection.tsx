@@ -76,12 +76,12 @@ export default function HowItWorksSection() {
         {/* CTA below */}
         <div className="text-center mt-12">
           <a
-            href="#pricing"
+            href="tel:+919886970262"
             className="inline-flex items-center gap-2 px-6 py-3 bg-[#2563EB] hover:bg-[#1D4ED8] text-white font-semibold rounded-xl text-sm transition-all hover:scale-[1.02]"
           >
-            Get Started Free →
+            Contact Sales →
           </a>
-          <p className="text-xs text-[#94A3B8] mt-3">No credit card required · 7-day free trial</p>
+          <p className="text-xs text-[#94A3B8] mt-3">Reach us directly · We&apos;ll set you up fast</p>
         </div>
       </div>
     </section>

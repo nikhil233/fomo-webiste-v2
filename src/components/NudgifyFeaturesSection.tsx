@@ -292,19 +292,19 @@ export default function NudgifyFeaturesSection() {
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
               <a
-                href="#pricing"
+                href="tel:+919886970262"
                 className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-[#0F172A] hover:bg-[#1E293B] text-white font-semibold rounded-xl text-sm transition-all hover:scale-[1.02]"
               >
-                Add to My Site
+                Contact Sales
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                   <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
               </a>
               <a
-                href="#pricing"
+                href="tel:+919886970262"
                 className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white border border-[#E2E8F0] hover:border-[#CBD5E1] text-[#0F172A] font-semibold rounded-xl text-sm transition-all hover:shadow-sm"
               >
-                Add to Shopify
+                Book a Demo
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                   <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>

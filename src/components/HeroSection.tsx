@@ -23,7 +23,7 @@ export default function HeroSection() {
         {/* Badge */}
         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-blue-500/30 bg-blue-500/10 text-sky-300 text-sm font-medium mb-8">
           <span>✨</span>
-          <span>Trusted by 3,100+ brands worldwide</span>
+          <span>Trusted by 130+ brands worldwide</span>
         </div>
 
         {/* H1 */}
@@ -52,9 +52,9 @@ export default function HeroSection() {
         {/* Stats Row */}
         <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12 mb-12">
           {[
-            { value: "3,100+", label: "Brands trust us" },
-            { value: "138", label: "Countries" },
-            { value: "4.9/5 ★", label: "Avg rating" },
+            { value: "130+", label: "Brands trust us" },
+            { value: "12+", label: "Countries" },
+            { value: "Growing 🚀", label: "Early adopters in" },
           ].map((stat) => (
             <div key={stat.value} className="text-center">
               <div className="text-2xl font-bold text-white">{stat.value}</div>
@@ -66,10 +66,10 @@ export default function HeroSection() {
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-20">
           <a
-            href="#pricing"
+            href="tel:+919886970262"
             className="px-7 py-3.5 bg-[#2563EB] hover:bg-[#1D4ED8] text-white font-semibold rounded-xl text-base transition-all hover:scale-[1.02] shadow-lg shadow-blue-900/40"
           >
-            Start for Free →
+            Contact Sales →
           </a>
           <a
             href="#features"
@@ -141,9 +141,9 @@ export default function HeroSection() {
                   ⭐
                 </div>
                 <div className="flex-1 min-w-0">
-                  <div className="text-sm font-semibold text-gray-900">New 5-star review</div>
-                  <p className="text-xs text-gray-500 mt-0.5 italic">&ldquo;Incredible tool!&rdquo;</p>
-                  <p className="text-xs text-gray-400 mt-1">Mike T. · Trustpilot · just now</p>
+                  <div className="text-sm font-semibold text-gray-900">23 people viewing this</div>
+                  <p className="text-xs text-gray-500 mt-0.5">Product page · right now</p>
+                  <p className="text-xs text-orange-500 font-medium mt-1">🔴 High demand detected</p>
                 </div>
               </div>
             </div>

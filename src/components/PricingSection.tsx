@@ -237,10 +237,21 @@ export default function PricingSection() {
 function WaitlistForm() {
   const [email, setEmail] = useState("");
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    if (email.trim()) setSubmitted(true);
+    if (!email.trim()) return;
+    setLoading(true);
+    const form = e.currentTarget;
+    await fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams({ "form-name": "waitlist", email }).toString(),
+    });
+    setLoading(false);
+    form.reset();
+    setSubmitted(true);
   };
 
   if (submitted) {
@@ -262,9 +273,18 @@ function WaitlistForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="bg-white rounded-2xl border border-[#E2E8F0] p-2 shadow-sm flex gap-2">
+    <form
+      onSubmit={handleSubmit}
+      name="waitlist"
+      data-netlify="true"
+      netlify-honeypot="bot-field"
+      className="bg-white rounded-2xl border border-[#E2E8F0] p-2 shadow-sm flex gap-2"
+    >
+      <input type="hidden" name="form-name" value="waitlist" />
+      <input type="hidden" name="bot-field" />
       <input
         type="email"
+        name="email"
         required
         value={email}
         onChange={(e) => setEmail(e.target.value)}
@@ -273,9 +293,10 @@ function WaitlistForm() {
       />
       <button
         type="submit"
-        className="px-5 py-3 bg-[#2563EB] hover:bg-[#1D4ED8] text-white text-sm font-semibold rounded-xl transition-all hover:scale-[1.02] whitespace-nowrap"
+        disabled={loading}
+        className="px-5 py-3 bg-[#2563EB] hover:bg-[#1D4ED8] disabled:opacity-60 text-white text-sm font-semibold rounded-xl transition-all hover:scale-[1.02] whitespace-nowrap"
       >
-        Join Waitlist →
+        {loading ? "Saving..." : "Join Waitlist →"}
       </button>
     </form>
   );

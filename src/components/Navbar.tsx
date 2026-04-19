@@ -82,10 +82,10 @@ export default function Navbar() {
             Login
           </a>
           <a
-            href="#pricing"
+            href="tel:+919886970262"
             className="px-5 py-2.5 bg-[#2563EB] hover:bg-[#1D4ED8] text-white text-sm font-semibold rounded-lg transition-colors duration-200"
           >
-            Start Free Trial
+            Contact Sales
           </a>
         </div>
 
@@ -140,11 +140,11 @@ export default function Navbar() {
                 Login
               </a>
               <a
-                href="#pricing"
+                href="tel:+919886970262"
                 onClick={() => setMobileOpen(false)}
                 className="px-5 py-2.5 bg-[#2563EB] text-white text-sm font-semibold rounded-lg text-center"
               >
-                Start Free Trial
+                Contact Sales
               </a>
             </div>
           </nav>

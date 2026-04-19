@@ -32,7 +32,7 @@ export default function FinalCTASection() {
           Start Your Free 7-Day Trial
         </h2>
         <p className="text-white/75 text-lg md:text-xl leading-relaxed mb-4 max-w-[580px] mx-auto">
-          Join 3,100+ brands using FomoWidget to build trust, create urgency, and convert more
+          Join 130+ early-mover brands using FomoWidget to build trust, create urgency, and convert more
           visitors into buyers.
         </p>
         <p className="text-white/55 text-sm mb-10">
@@ -42,16 +42,16 @@ export default function FinalCTASection() {
         {/* Buttons */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
           <a
-            href="#pricing"
+            href="tel:+919886970262"
             className="px-8 py-4 bg-white text-[#2563EB] font-bold rounded-xl text-base hover:bg-blue-50 transition-all hover:scale-[1.02] shadow-xl shadow-black/20"
           >
-            Add to My Website →
+            Contact Sales →
           </a>
           <a
-            href="#pricing"
+            href="tel:+919886970262"
             className="px-8 py-4 bg-black/25 backdrop-blur-sm border border-white/20 text-white font-semibold rounded-xl text-base hover:bg-black/35 transition-all"
           >
-            Add to Shopify →
+            Book a Demo →
           </a>
         </div>
 
