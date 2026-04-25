@@ -7,7 +7,6 @@ import LiveCounterSection from "@/components/LiveCounterSection";
 import HowItWorksSection from "@/components/HowItWorksSection";
 import FeaturesSection from "@/components/FeaturesSection";
 import IntegrationsSection from "@/components/IntegrationsSection";
-import PricingSection from "@/components/PricingSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import FinalCTASection from "@/components/FinalCTASection";
 import Footer from "@/components/Footer";
@@ -26,7 +25,6 @@ export default function Home() {
         <HowItWorksSection />
         <FeaturesSection />
         <IntegrationsSection />
-        <PricingSection />
         <TestimonialsSection />
         <FinalCTASection />
       </main>

@@ -14,7 +14,7 @@ const tabs = [
       </svg>
     ),
     heading: "Show What Others do on your Website",
-    body: "As Jonah Berger explained, 'Making something more visible makes it easier to imitate'. With Nudgify Social Proof app, you can show your visitors things they don't usually see – like who else is online, and what they're buying.",
+    body: "As Jonah Berger explained, 'Making something more visible makes it easier to imitate'. With FomoWidget, you can show your visitors things they don't usually see – like who else is online, and what they're buying.",
     preview: "realtime",
   },
   {
@@ -40,7 +40,7 @@ const tabs = [
       </svg>
     ),
     heading: "Nudge the Way you Want Overlay or Inline",
-    body: "Nudgify shows non-intrusive Social Proof notifications, improving the customer experience on your e-Commerce, Travel or SaaS website.",
+    body: "FomoWidget shows non-intrusive Social Proof notifications, improving the customer experience on your e-Commerce, Travel or SaaS website.",
     preview: "customize",
   },
 ];
@@ -81,7 +81,7 @@ function RealtimePreview() {
             <div className="flex items-center gap-2">
               <div className="w-8 h-8 rounded-full bg-blue-50 flex items-center justify-center text-base flex-shrink-0">🛍️</div>
               <div>
-                <div className="text-[11px] font-semibold text-gray-800 leading-tight">James from London</div>
+                <div className="text-[11px] font-semibold text-gray-800 leading-tight">Arjun from Mumbai</div>
                 <div className="text-[10px] text-gray-400 mt-0.5">just purchased this item</div>
               </div>
             </div>
@@ -292,16 +292,16 @@ export default function NudgifyFeaturesSection() {
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
               <a
-                href="tel:+919886970262"
+                href="#waitlist"
                 className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-[#0F172A] hover:bg-[#1E293B] text-white font-semibold rounded-xl text-sm transition-all hover:scale-[1.02]"
               >
-                Contact Sales
+                Get a Free Demo
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                   <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
               </a>
               <a
-                href="tel:+919886970262"
+                href="mailto:fomowidget@gmail.com?subject=FomoWidget Demo Request"
                 className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white border border-[#E2E8F0] hover:border-[#CBD5E1] text-[#0F172A] font-semibold rounded-xl text-sm transition-all hover:shadow-sm"
               >
                 Book a Demo

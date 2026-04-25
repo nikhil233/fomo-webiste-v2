@@ -1,18 +1,8 @@
-// TODO: Uncomment and replace with real client logos once onboarded
-// const brands = [
-//   "Tropical Fruit Box",
-//   "All-Star Elite",
-//   "Lundberg Family Farms",
-//   "Sennheiser",
-//   "SKYN",
-//   "Shopify Brands",
-// ];
-
 const highlights = [
+  { emoji: "🇮🇳", value: "India-First", label: "Priced in ₹, built for Indian stores" },
   { emoji: "⚡", value: "5-Minute", label: "Setup. No dev needed." },
-  { emoji: "🎯", value: "2x–3x", label: "Avg. conversion lift" },
-  { emoji: "🌍", value: "Any Store", label: "Any platform, any size" },
-  { emoji: "🔒", value: "Zero Risk", label: "Free trial, cancel anytime" },
+  { emoji: "💰", value: "₹599/mo", label: "Starter plan, cancel anytime" },
+  { emoji: "🔒", value: "Zero Risk", label: "Free trial, no credit card" },
 ];
 
 export default function TrustBar() {
@@ -22,9 +12,9 @@ export default function TrustBar() {
         {/* Headline */}
         <div className="text-center mb-8">
           <h3 className="text-2xl md:text-3xl font-extrabold text-[#0F172A] mb-1">
-            Loved by <span className="text-[#6366F1]">130+ Businesses</span>
+            Built for <span className="text-[#6366F1]">Indian D2C Founders</span>
           </h3>
-          <p className="text-sm text-[#64748B]">from solo founders to scaling brands</p>
+          <p className="text-sm text-[#64748B]">₹599/mo · 5-minute setup · COD-aware · No code needed</p>
         </div>
         <div className="flex flex-wrap items-center justify-center gap-0">
           {highlights.map((h, i) => (

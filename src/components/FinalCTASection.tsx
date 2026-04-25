@@ -29,29 +29,22 @@ export default function FinalCTASection() {
         </div>
 
         <h2 className="text-4xl md:text-[52px] font-extrabold text-white leading-tight mb-5">
-          Start Your Free 7-Day Trial
+          Get Started — We&apos;ll Set You Up Today
         </h2>
         <p className="text-white/75 text-lg md:text-xl leading-relaxed mb-4 max-w-[580px] mx-auto">
-          Join 130+ early-mover brands using FomoWidget to build trust, create urgency, and convert more
-          visitors into buyers.
+          Built for Indian D2C founders. Add social proof to your store in 5 minutes — in ₹, not $.
         </p>
         <p className="text-white/55 text-sm mb-10">
-          No credit card required · Cancel anytime · Up to 1,000 impressions free
+          No credit card required · Cancel anytime · Full access for 30 days
         </p>
 
         {/* Buttons */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
           <a
-            href="tel:+919886970262"
+            href="#waitlist"
             className="px-8 py-4 bg-white text-[#2563EB] font-bold rounded-xl text-base hover:bg-blue-50 transition-all hover:scale-[1.02] shadow-xl shadow-black/20"
           >
-            Contact Sales →
-          </a>
-          <a
-            href="tel:+919886970262"
-            className="px-8 py-4 bg-black/25 backdrop-blur-sm border border-white/20 text-white font-semibold rounded-xl text-base hover:bg-black/35 transition-all"
-          >
-            Book a Demo →
+            Get a Free Demo →
           </a>
         </div>
 
@@ -61,7 +54,7 @@ export default function FinalCTASection() {
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
               <path d="M2 7l3 3 7-7" stroke="#34D399" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
-            <span>7-day free trial</span>
+            <span>30-day free trial</span>
           </div>
           <div className="flex items-center gap-1.5">
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none">

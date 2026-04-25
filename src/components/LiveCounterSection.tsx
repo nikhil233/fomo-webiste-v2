@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 
 function useCountUp(target: number, duration: number = 2000) {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(target - Math.floor(target * 0.08));
   const [started, setStarted] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 
@@ -134,7 +134,7 @@ export default function LiveCounterSection() {
             </ul>
 
             <a
-              href="#pricing"
+              href="#waitlist"
               className="inline-flex items-center gap-2 px-6 py-3 bg-emerald-500 hover:bg-emerald-400 text-white font-semibold rounded-xl transition-all hover:scale-[1.02] text-sm"
             >
               Try Live Counter Free →

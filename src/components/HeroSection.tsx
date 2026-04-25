@@ -22,13 +22,13 @@ export default function HeroSection() {
       <div className="relative max-w-[1280px] mx-auto px-6 pt-36 pb-24 text-center">
         {/* Badge */}
         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-blue-500/30 bg-blue-500/10 text-sky-300 text-sm font-medium mb-8">
-          <span>✨</span>
-          <span>Trusted by 130+ brands worldwide</span>
+          <span>🇮🇳</span>
+          <span>Built for Indian D2C Stores</span>
         </div>
 
         {/* H1 */}
         <h1 className="text-5xl md:text-6xl lg:text-[68px] font-extrabold text-white leading-[1.1] mb-6 tracking-tight">
-          Boost Sales with Real-Time
+          Social Proof Built for
           <br />
           <span
             style={{
@@ -38,38 +38,24 @@ export default function HeroSection() {
               backgroundClip: "text",
             }}
           >
-            Social Proof
+            Indian Stores
           </span>{" "}
-          &amp; Live Activity
+          — In ₹, Not $
         </h1>
 
         {/* Subheadline */}
         <p className="text-lg md:text-xl text-white/70 max-w-[560px] mx-auto leading-relaxed mb-10">
           Show live visitor counts, recent sales, and real-time activity to build instant trust
-          and drive more conversions.
+          and drive more conversions. Built for Indian D2C founders, priced in INR.
         </p>
-
-        {/* Stats Row */}
-        <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12 mb-12">
-          {[
-            { value: "130+", label: "Brands trust us" },
-            { value: "12+", label: "Countries" },
-            { value: "Growing 🚀", label: "Early adopters in" },
-          ].map((stat) => (
-            <div key={stat.value} className="text-center">
-              <div className="text-2xl font-bold text-white">{stat.value}</div>
-              <div className="text-xs text-white/50 mt-1">{stat.label}</div>
-            </div>
-          ))}
-        </div>
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-20">
           <a
-            href="tel:+919886970262"
+            href="#waitlist"
             className="px-7 py-3.5 bg-[#2563EB] hover:bg-[#1D4ED8] text-white font-semibold rounded-xl text-base transition-all hover:scale-[1.02] shadow-lg shadow-blue-900/40"
           >
-            Contact Sales →
+            Get a Free Demo →
           </a>
           <a
             href="#features"
@@ -91,7 +77,7 @@ export default function HeroSection() {
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center gap-2">
                     <span className="text-sm font-semibold text-gray-900 truncate">
-                      Sarah K. just purchased
+                      Priya from Bengaluru just purchased
                     </span>
                     <span className="w-2 h-2 rounded-full bg-emerald-500 flex-shrink-0" />
                   </div>

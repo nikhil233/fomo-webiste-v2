@@ -1,107 +1,108 @@
-const testimonials = [
-  {
-    quote:
-      "FomoWidget has greatly improved the trust and confidence of our current and prospect customers from day one. The live user counter is incredibly powerful.",
-    name: "Priya S.",
-    role: "Founder, Online Boutique",
-    avatar: "PS",
-    avatarBg: "#EFF6FF",
-    avatarColor: "#2563EB",
-  },
-  {
-    quote:
-      "With FomoWidget's help, I increased online business sales. Easy-to-connect integrations and the social proof widgets work exactly as described.",
-    name: "Rahul M.",
-    role: "Store Owner, Lifestyle Brand",
-    avatar: "RM",
-    avatarBg: "#FEF3C7",
-    avatarColor: "#D97706",
-  },
-  {
-    quote:
-      "The live active users counter alone pays for itself. When customers see 200+ people shopping at the same time, they don't hesitate to buy.",
-    name: "Neha K.",
-    role: "eCommerce Manager, Fashion Brand",
-    avatar: "NK",
-    avatarBg: "#F0FDF4",
-    avatarColor: "#16A34A",
-  },
-  {
-    quote:
-      "Setup took literally 3 minutes. We saw a 24% increase in checkout completion rate within the first week. Absolutely worth every penny.",
-    name: "Arjun T.",
-    role: "CTO, Sports & Fitness Store",
-    avatar: "AT",
-    avatarBg: "#FEF2F2",
-    avatarColor: "#DC2626",
-  },
-  {
-    quote:
-      "Best social proof tool we've tried. The analytics dashboard shows exactly which nudges drive the most conversions. Data-driven decisions made easy.",
-    name: "Sneha P.",
-    role: "Marketing Director, Beauty & Wellness",
-    avatar: "SP",
-    avatarBg: "#F5F3FF",
-    avatarColor: "#1E40AF",
-  },
-  {
-    quote:
-      "We run 12 Shopify stores and FomoWidget works seamlessly across all of them. The agency plan is a steal for the volume we get.",
-    name: "Vikram W.",
-    role: "Agency Owner, Multi-Store Management",
-    avatar: "VW",
-    avatarBg: "#ECFDF5",
-    avatarColor: "#059669",
-  },
-];
+"use client";
 
+import { useState } from "react";
+
+function ContactForm() {
+  const [contact, setContact] = useState("");
+  const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    if (!contact.trim()) return;
+    setLoading(true);
+    await fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams({
+        "form-name": "contact",
+        contact: contact.trim(),
+      }).toString(),
+    });
+    setLoading(false);
+    setContact("");
+    setSubmitted(true);
+  };
+
+  if (submitted) {
+    return (
+      <div className="text-center py-6 px-8 bg-white rounded-2xl border border-emerald-200 shadow-sm max-w-[500px] mx-auto">
+        <div className="text-3xl mb-3">🎉</div>
+        <h3 className="text-lg font-bold text-[#0F172A] mb-1">Got it — we&apos;ll reach out soon!</h3>
+        <p className="text-sm text-[#64748B]">
+          Expect to hear from us within a few hours.
+        </p>
+      </div>
+    );
+  }
+
+  return (
+    <form
+      onSubmit={handleSubmit}
+      name="contact"
+      data-netlify="true"
+      netlify-honeypot="bot-field"
+      className="flex flex-col sm:flex-row gap-3 max-w-[500px] mx-auto"
+    >
+      <input type="hidden" name="form-name" value="contact" />
+      <input type="hidden" name="bot-field" />
+      <input
+        type="text"
+        name="contact"
+        required
+        value={contact}
+        onChange={(e) => setContact(e.target.value)}
+        placeholder="Your email or phone number"
+        className="flex-1 px-5 py-3.5 text-sm text-[#0F172A] placeholder-[#94A3B8] bg-white border border-[#E2E8F0] rounded-xl outline-none focus:border-[#2563EB] transition-colors shadow-sm"
+      />
+      <button
+        type="submit"
+        disabled={loading}
+        className="px-6 py-3.5 bg-[#2563EB] hover:bg-[#1D4ED8] disabled:opacity-60 text-white text-sm font-semibold rounded-xl transition-all hover:scale-[1.02] whitespace-nowrap shadow-lg shadow-blue-900/20"
+      >
+        {loading ? "Sending..." : "We'll Contact You →"}
+      </button>
+    </form>
+  );
+}
 
 export default function TestimonialsSection() {
   return (
-    <section id="testimonials" className="bg-[#F8FAFC] py-24">
+    <section id="waitlist" className="bg-[#F8FAFC] py-24">
       <div className="max-w-[1280px] mx-auto px-6">
-        {/* Header */}
-        <div className="text-center mb-14">
+        <div className="text-center max-w-[640px] mx-auto">
           <div className="inline-block text-xs font-semibold tracking-[0.1em] uppercase text-[#2563EB] mb-4">
-            Customer Stories
+            Get Started
           </div>
           <h2 className="text-4xl md:text-[44px] font-extrabold text-[#0F172A] leading-tight mb-4">
-            Loved by 130+ Businesses
+            Ready to boost your store&apos;s conversions?
           </h2>
-          <div className="flex items-center justify-center gap-2 flex-wrap">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-orange-50 border border-orange-200 rounded-full text-sm font-medium text-orange-700">
-              🔥 14 new stores joined this week
-            </span>
-            <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-green-50 border border-green-200 rounded-full text-sm font-medium text-green-700">
-              ✅ Early adopter spots filling fast
-            </span>
-          </div>
-        </div>
+          <p className="text-lg text-[#64748B] leading-relaxed mb-8">
+            Drop your email or phone number — we&apos;ll reach out, walk you through setup, and
+            get you live within the day.
+          </p>
 
-        {/* Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {testimonials.map((t) => (
-            <div
-              key={t.name}
-              className="bg-white rounded-2xl p-7 border border-[#E2E8F0] hover:border-blue-200 hover:shadow-[0_8px_32px_rgba(0,0,0,0.08)] hover:-translate-y-0.5 transition-all duration-200"
-            >
-              <p className="text-[#374151] text-sm leading-relaxed mt-2 mb-6 italic">
-                &ldquo;{t.quote}&rdquo;
-              </p>
-              <div className="flex items-center gap-3">
-                <div
-                  className="w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0"
-                  style={{ background: t.avatarBg, color: t.avatarColor }}
-                >
-                  {t.avatar}
-                </div>
-                <div>
-                  <div className="text-sm font-semibold text-[#0F172A]">{t.name}</div>
-                  <div className="text-xs text-[#94A3B8]">{t.role}</div>
-                </div>
+          <ContactForm />
+
+          <p className="text-xs text-[#94A3B8] mt-4">
+            We&apos;ll reach out within a few hours. No spam, no auto-calls.
+          </p>
+
+          <div className="mt-10 flex flex-wrap items-center justify-center gap-6 text-sm text-[#64748B]">
+            {[
+              "30-day free trial",
+              "5-minute setup",
+              "Priced in ₹",
+              "Cancel anytime",
+            ].map((item) => (
+              <div key={item} className="flex items-center gap-2">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <path d="M2 8l4 4 8-8" stroke="#10B981" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+                {item}
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>

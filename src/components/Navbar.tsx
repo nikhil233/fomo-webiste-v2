@@ -4,9 +4,8 @@ import { useState, useEffect } from "react";
 
 const navLinks = [
   { label: "Features", href: "#features" },
-  { label: "Pricing", href: "#pricing" },
   { label: "Integrations", href: "#integrations" },
-  { label: "Results", href: "#testimonials" },
+  { label: "Early Access", href: "#waitlist" },
 ];
 
 export default function Navbar() {
@@ -82,10 +81,10 @@ export default function Navbar() {
             Login
           </a>
           <a
-            href="tel:+919886970262"
+            href="#waitlist"
             className="px-5 py-2.5 bg-[#2563EB] hover:bg-[#1D4ED8] text-white text-sm font-semibold rounded-lg transition-colors duration-200"
           >
-            Contact Sales
+            Get a Free Demo
           </a>
         </div>
 
@@ -140,11 +139,11 @@ export default function Navbar() {
                 Login
               </a>
               <a
-                href="tel:+919886970262"
+                href="#waitlist"
                 onClick={() => setMobileOpen(false)}
                 className="px-5 py-2.5 bg-[#2563EB] text-white text-sm font-semibold rounded-lg text-center"
               >
-                Contact Sales
+                Get a Free Demo
               </a>
             </div>
           </nav>
