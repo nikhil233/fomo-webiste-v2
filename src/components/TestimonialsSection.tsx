@@ -41,7 +41,7 @@ function ContactForm() {
       onSubmit={handleSubmit}
       name="contact"
       data-netlify="true"
-      netlify-honeypot="bot-field"
+      data-netlify-honeypot="bot-field"
       className="flex flex-col sm:flex-row gap-3 max-w-[500px] mx-auto"
     >
       <input type="hidden" name="form-name" value="contact" />
