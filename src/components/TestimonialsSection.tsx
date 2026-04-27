@@ -11,13 +11,10 @@ function ContactForm() {
     e.preventDefault();
     if (!contact.trim()) return;
     setLoading(true);
-    await fetch("/", {
+    await fetch("https://eomw52w09otvdrf.m.pipedream.net", {
       method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams({
-        "form-name": "contact",
-        contact: contact.trim(),
-      }).toString(),
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ user_input: contact.trim() }),
     });
     setLoading(false);
     setContact("");
