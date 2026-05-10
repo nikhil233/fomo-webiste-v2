@@ -1,7 +1,7 @@
 const highlights = [
   { emoji: "🇮🇳", value: "India-First", label: "Priced in ₹, built for Indian stores" },
   { emoji: "⚡", value: "5-Minute", label: "Setup. No dev needed." },
-  { emoji: "💰", value: "₹599/mo", label: "Starter plan, cancel anytime" },
+  { emoji: "💰", value: "Free Trial", label: "No credit card needed" },
   { emoji: "🔒", value: "Zero Risk", label: "Free trial, no credit card" },
 ];
 
@@ -14,7 +14,7 @@ export default function TrustBar() {
           <h3 className="text-2xl md:text-3xl font-extrabold text-[#0F172A] mb-1">
             Built for <span className="text-[#6366F1]">Indian D2C Founders</span>
           </h3>
-          <p className="text-sm text-[#64748B]">₹599/mo · 5-minute setup · COD-aware · No code needed</p>
+          <p className="text-sm text-[#64748B]">5-minute setup · COD-aware · No code needed</p>
         </div>
         <div className="flex flex-wrap items-center justify-center gap-0">
           {highlights.map((h, i) => (
