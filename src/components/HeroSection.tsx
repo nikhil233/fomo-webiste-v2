@@ -60,9 +60,9 @@ export default function HeroSection() {
         {/* ── Left: Copy ── */}
         <div className="flex-1 lg:max-w-[520px] text-left">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 border border-blue-100 text-blue-600 text-sm font-semibold mb-8">
-            <span className="w-2 h-2 rounded-full bg-blue-500 animate-pulse inline-block" />
-            <span>FOMO Widgets · Built for Indian D2C · Priced in ₹</span>
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 border border-blue-100 text-blue-600 text-sm font-semibold mb-8 max-w-full flex-wrap">
+            <span className="w-2 h-2 rounded-full bg-blue-500 animate-pulse inline-block flex-shrink-0" />
+            <span className="leading-snug">FOMO Widgets · Indian D2C · ₹</span>
           </div>
 
           {/* Headline */}
@@ -98,6 +98,27 @@ export default function HeroSection() {
 
         {/* ── Right: Browser mockup ── */}
         <div className="flex-1 w-full max-w-[540px] lg:max-w-none">
+
+          {/* Live Demo CTA */}
+          <a
+            href="/demo"
+            className="group flex items-center justify-between mb-5 px-5 py-3.5 rounded-2xl border-2 border-dashed border-[#2563EB]/40 hover:border-[#2563EB] hover:bg-blue-50/60 transition-all duration-200 cursor-pointer"
+          >
+            <div className="flex items-center gap-3">
+              <div className="w-9 h-9 rounded-xl bg-blue-100 flex items-center justify-center text-lg flex-shrink-0 group-hover:scale-110 transition-transform">
+                🛍️
+              </div>
+              <div>
+                <div className="text-sm font-bold text-gray-900 leading-tight">Experience it yourself</div>
+                <div className="text-xs text-gray-400 mt-0.5">Click to see exactly what your buyers will feel</div>
+              </div>
+            </div>
+            <div className="flex items-center gap-2 bg-[#2563EB] text-white text-xs font-bold px-3 py-1.5 rounded-full flex-shrink-0 group-hover:bg-[#1D4ED8] transition-colors">
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+              Live Demo
+            </div>
+          </a>
+
           <div
             className="rounded-2xl overflow-hidden border border-gray-100"
             style={{ boxShadow: "0 32px 80px rgba(0,0,0,0.10), 0 4px 16px rgba(0,0,0,0.06)" }}

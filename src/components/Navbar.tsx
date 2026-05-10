@@ -8,6 +8,8 @@ const navLinks = [
   { label: "Early Access", href: "#waitlist" },
 ];
 
+const demoLink = { label: "Live Demo", href: "/demo" };
+
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
