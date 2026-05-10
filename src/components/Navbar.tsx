@@ -46,7 +46,7 @@ export default function Navbar() {
           </svg>
           <span
             className={`font-bold text-[20px] tracking-tight transition-colors duration-300 ${
-              scrolled ? "text-[#0F172A]" : "text-white"
+              scrolled ? "text-[#0F172A]" : "text-[#0A0A0A]"
             }`}
           >
             FomoWidget
@@ -62,7 +62,7 @@ export default function Navbar() {
               className={`text-[15px] font-medium transition-colors duration-200 ${
                 scrolled
                   ? "text-[#374151] hover:text-[#111827]"
-                  : "text-white/85 hover:text-white"
+                  : "text-[#374151] hover:text-[#111827]"
               }`}
             >
               {link.label}
@@ -75,7 +75,7 @@ export default function Navbar() {
           <a
             href="#"
             className={`text-[15px] font-medium transition-colors duration-200 ${
-              scrolled ? "text-[#374151] hover:text-[#111827]" : "text-white/85 hover:text-white"
+              scrolled ? "text-[#374151] hover:text-[#111827]" : "text-[#374151] hover:text-[#111827]"
             }`}
           >
             Login
@@ -99,7 +99,7 @@ export default function Navbar() {
             height="22"
             viewBox="0 0 22 22"
             fill="none"
-            className={scrolled ? "text-[#0F172A]" : "text-white"}
+            className={scrolled ? "text-[#0F172A]" : "text-[#0A0A0A]"}
           >
             {mobileOpen ? (
               <path
